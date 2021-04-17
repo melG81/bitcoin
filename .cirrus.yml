@@ -122,10 +122,10 @@ task:
     FILE_ENV: "./ci/test/00_setup_env_native_qt5.sh"
 
 task:
-  name: '[depends, sanitizers: thread (TSan), no gui] [hirsute]'
+  name: '[depends, sanitizers: thread (TSan), no gui] [focal]'
   << : *GLOBAL_TASK_TEMPLATE
   container:
-    image: ubuntu:hirsute
+    image: ubuntu:focal
     cpu: 6  # Increase CPU and Memory to avoid timeout
     memory: 24G
   env:
